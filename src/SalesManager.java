@@ -16,18 +16,18 @@ public class SalesManager {
 
     }
 
-    public int average() {
-        int totalSum = 0;
-        for (int sale : sales) {
+    public long average() {
+        long totalSum = 0;
+        for (long sale : sales) {
             totalSum += sale;
         }
-        int min = sales[0];
-        for (int sale : sales) {
+        long min = sales[0];
+        for (long sale : sales) {
             if (min > sale) {
                 min = sale;
             }
         }
-        int av = (totalSum - min - max()) / (sales.length - 2);
+        long av = (totalSum - min - max()) / (sales.length - 2);
         return av;
     }
 }
